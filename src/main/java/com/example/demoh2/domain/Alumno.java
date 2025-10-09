@@ -26,7 +26,6 @@ public class Alumno {
     }
 
     // Getters y setters
-
     public Long getId() {
         return id;
     }
