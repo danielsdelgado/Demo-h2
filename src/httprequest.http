@@ -110,10 +110,9 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "nombre": "Lucía Gómez Ramírez",
-  "email": "lucia.ramirez@example.com",
-  "curso": {
-    "id": 2
+  "nombre": "Raquel Gómez Ramírez",
+  "email": "raquel.ramirez@example.com",
+  "cursoId": 2
   }
 }
 

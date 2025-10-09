@@ -4,8 +4,12 @@ C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\DemoH2Application.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\domain\Alumno.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\domain\Curso.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\dto\AlumnoDTO.java
+C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\dto\AlumnoResponseDTO.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\dto\CursoDTO.java
-C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\exception\GlobalExceptionHandler.java
+C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\dto\CursoResponseDTO.java
+C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\exceptions\GlobalExceptionHandler.java
+C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\mapper\AlumnoMapper.java
+C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\mapper\CursoMapper.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\repository\AlumnoRepository.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\repository\CursoRepository.java
 C:\Ejercicios\demo-h2\src\main\java\com\example\demoh2\service\AlumnoService.java
