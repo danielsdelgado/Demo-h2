@@ -1,0 +1,123 @@
+### ✅ 1. Crear curso válido
+POST http://localhost:8081/api/cursos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Matemáticas",
+  "profesor": "Carlos Pérez"
+}
+
+
+### ❌ 2. Crear curso con datos vacíos
+POST http://localhost:8081/api/cursos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "",
+  "profesor": ""
+}
+
+
+### ✅ 3. Obtener todos los cursos
+GET http://localhost:8081/api/cursos
+Accept: application/json
+
+
+### ✅ 4. Obtener curso por ID
+GET http://localhost:8081/api/cursos/1
+Accept: application/json
+
+
+### ✅ 5. Actualizar curso
+PUT http://localhost:8081/api/cursos/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Matemáticas Avanzadas",
+  "profesor": "Ana López"
+}
+
+
+### ✅ 6. Eliminar curso
+DELETE http://localhost:8081/api/cursos/1
+Accept: application/json
+
+
+
+### ✅ 7. Crear curso para probar alumnos
+POST http://localhost:8081/api/cursos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Física",
+  "profesor": "Laura Sánchez"
+}
+
+
+
+### ✅ 8. Crear alumno válido (asumiendo curso con ID 2)
+POST http://localhost:8081/api/alumnos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Lucía Gómez",
+  "email": "lucia.gomez@example.com",
+  "cursoId": 2
+}
+
+
+### ❌ 9. Crear alumno sin curso
+POST http://localhost:8081/api/alumnos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Pedro SinCurso",
+  "email": "pedro@example.com"
+}
+
+
+### ❌ 10. Crear alumno con email inválido
+POST http://localhost:8081/api/alumnos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Pedro",
+  "email": "no-es-un-email",
+  "cursoId": 2
+}
+
+
+### ✅ 11. Obtener todos los alumnos
+GET http://localhost:8081/api/alumnos
+Accept: application/json
+
+
+### ✅ 12. Obtener alumno por ID
+GET http://localhost:8081/api/alumnos/1
+Accept: application/json
+
+
+### ✅ 13. Actualizar alumno (revisar lógica si usas DTO aquí también)
+PUT http://localhost:8081/api/alumnos/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Lucía Gómez Ramírez",
+  "email": "lucia.ramirez@example.com",
+  "curso": {
+    "id": 2
+  }
+}
+
+
+### ✅ 14. Eliminar alumno
+DELETE http://localhost:8081/api/alumnos/1
+Accept: application/json
