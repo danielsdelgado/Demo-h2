@@ -1,6 +1,6 @@
 package com.example.demoh2.controller;
 
-import com.example.demoh2.dto.CursoDTO;
+import com.example.demoh2.dto.CursoRequestDTO;
 import com.example.demoh2.dto.CursoResponseDTO;
 import com.example.demoh2.mapper.CursoMapper;
 import com.example.demoh2.service.CursoService;
@@ -31,7 +31,7 @@ public class CursoController {
 
     // POST: crear nuevo curso
     @PostMapping
-    public CursoResponseDTO crear(@RequestBody @Valid CursoDTO cursoDTO) {
+    public CursoResponseDTO crear(@RequestBody @Valid CursoRequestDTO cursoDTO) {
         var curso = CursoMapper.toEntity(cursoDTO);
         var creado = cursoService.crearCurso(curso);
         return CursoMapper.toDTO(creado);
@@ -47,7 +47,7 @@ public class CursoController {
 
     // PUT: actualizar curso
     @PutMapping("/{id}")
-    public CursoResponseDTO actualizar(@PathVariable Long id, @RequestBody @Valid CursoDTO cursoDTO) {
+    public CursoResponseDTO actualizar(@PathVariable Long id, @RequestBody @Valid CursoRequestDTO cursoDTO) {
         var cursoActualizado = CursoMapper.toEntity(cursoDTO);
         var actualizado = cursoService.actualizarCurso(id, cursoActualizado);
         return CursoMapper.toDTO(actualizado);

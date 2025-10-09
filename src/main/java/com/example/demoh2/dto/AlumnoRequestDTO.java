@@ -2,7 +2,7 @@ package com.example.demoh2.dto;
  
 import jakarta.validation.constraints.*;
 
-public class AlumnoDTO {
+public class AlumnoRequestDTO {
 
     @NotBlank(message = "El nombre del alumno es obligatorio")
     private String nombre;
@@ -14,9 +14,9 @@ public class AlumnoDTO {
     @NotNull(message = "Debe especificar el ID del curso")
     private Long cursoId;
 
-    public AlumnoDTO() {}
+    public AlumnoRequestDTO() {}
 
-    public AlumnoDTO(String nombre, String email, Long cursoId) {
+    public AlumnoRequestDTO(String nombre, String email, Long cursoId) {
         this.nombre = nombre;
         this.email = email;
         this.cursoId = cursoId;

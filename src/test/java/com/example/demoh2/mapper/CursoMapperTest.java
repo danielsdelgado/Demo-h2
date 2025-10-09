@@ -1,7 +1,7 @@
 package com.example.demoh2.mapper;
 
 import com.example.demoh2.domain.Curso;
-import com.example.demoh2.dto.CursoDTO;
+import com.example.demoh2.dto.CursoRequestDTO;
 import com.example.demoh2.dto.CursoResponseDTO;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ public class CursoMapperTest {
 
     @Test
     void testToEntity() {
-        CursoDTO dto = new CursoDTO("Física", "Newton");
+        CursoRequestDTO dto = new CursoRequestDTO("Física", "Newton");
 
         Curso curso = CursoMapper.toEntity(dto);
 

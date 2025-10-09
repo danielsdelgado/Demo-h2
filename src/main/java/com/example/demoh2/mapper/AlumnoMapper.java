@@ -2,12 +2,12 @@ package com.example.demoh2.mapper;
 
 import com.example.demoh2.domain.Alumno;
 import com.example.demoh2.domain.Curso;
-import com.example.demoh2.dto.AlumnoDTO;
+import com.example.demoh2.dto.AlumnoRequestDTO;
 import com.example.demoh2.dto.AlumnoResponseDTO;
 
 public class AlumnoMapper {
 
-    public static Alumno toEntity(AlumnoDTO dto, Curso curso) {
+    public static Alumno toEntity(AlumnoRequestDTO dto, Curso curso) {
         Alumno alumno = new Alumno();
         alumno.setNombre(dto.getNombre());
         alumno.setEmail(dto.getEmail());

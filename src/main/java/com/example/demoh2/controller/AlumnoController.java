@@ -1,7 +1,7 @@
 package com.example.demoh2.controller;
 
 import com.example.demoh2.domain.Curso;
-import com.example.demoh2.dto.AlumnoDTO;
+import com.example.demoh2.dto.AlumnoRequestDTO;
 import com.example.demoh2.dto.AlumnoResponseDTO;
 import com.example.demoh2.mapper.AlumnoMapper;
 import com.example.demoh2.service.AlumnoService;
@@ -35,7 +35,7 @@ public class AlumnoController {
 
     // POST: crear un nuevo alumno
     @PostMapping
-    public AlumnoResponseDTO crear(@RequestBody @Valid AlumnoDTO alumnoDTO) {
+    public AlumnoResponseDTO crear(@RequestBody @Valid AlumnoRequestDTO alumnoDTO) {
         Curso curso = cursoService.obtenerCursoPorId(alumnoDTO.getCursoId())
                 .orElseThrow(() -> new IllegalArgumentException("Curso no encontrado"));
 
@@ -54,7 +54,7 @@ public class AlumnoController {
 
     // PUT: actualizar alumno por ID
     @PutMapping("/{id}")
-    public AlumnoResponseDTO actualizar(@PathVariable Long id, @RequestBody @Valid AlumnoDTO alumnoDTO) {
+    public AlumnoResponseDTO actualizar(@PathVariable Long id, @RequestBody @Valid AlumnoRequestDTO alumnoDTO) {
         Curso curso = cursoService.obtenerCursoPorId(alumnoDTO.getCursoId())
                 .orElseThrow(() -> new IllegalArgumentException("Curso no encontrado"));
 

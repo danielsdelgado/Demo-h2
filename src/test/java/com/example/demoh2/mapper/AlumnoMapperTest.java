@@ -2,7 +2,7 @@ package com.example.demoh2.mapper;
 
 import com.example.demoh2.domain.Alumno;
 import com.example.demoh2.domain.Curso;
-import com.example.demoh2.dto.AlumnoDTO;
+import com.example.demoh2.dto.AlumnoRequestDTO;
 import com.example.demoh2.dto.AlumnoResponseDTO;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ public class AlumnoMapperTest {
 
     @Test
     void testToEntity() {
-        AlumnoDTO dto = new AlumnoDTO();
+        AlumnoRequestDTO dto = new AlumnoRequestDTO();
         dto.setNombre("Juan");
         dto.setEmail("juan@correo.com");
         dto.setCursoId(1L);

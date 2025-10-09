@@ -2,7 +2,7 @@ package com.example.demoh2.dto;
 
 import jakarta.validation.constraints.*;
 
-public class CursoDTO {
+public class CursoRequestDTO {
 
     @NotBlank(message = "El nombre del curso es obligatorio")
     private String nombre;
@@ -10,9 +10,9 @@ public class CursoDTO {
     @NotBlank(message = "El nombre del profesor es obligatorio")
     private String profesor;
 
-    public CursoDTO() {}
+    public CursoRequestDTO() {}
 
-    public CursoDTO(String nombre, String profesor) {
+    public CursoRequestDTO(String nombre, String profesor) {
         this.nombre = nombre;
         this.profesor = profesor;
     }
