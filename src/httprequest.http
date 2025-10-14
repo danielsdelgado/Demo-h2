@@ -4,8 +4,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "nombre": "Matemáticas",
-  "profesor": "Carlos Pérez"
+  "nombre": "INGENIERIA DEL SOFTWARE",
+  "profesor": "Nacho"
 }
 
 
@@ -65,9 +65,9 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "nombre": "Lucía Gómez",
+  "nombre": "Diego",
   "email": "lucia.gomez@example.com",
-  "cursoId": 2
+  "cursoId": 8
 }
 
 
@@ -77,7 +77,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "nombre": "Pedro SinCurso",
+  "nombre": "Diego",
   "email": "pedro@example.com"
 }
 
@@ -105,15 +105,14 @@ Accept: application/json
 
 
 ### ✅ 13. Actualizar alumno (revisar lógica si usas DTO aquí también)
-PUT http://localhost:8081/api/alumnos/1
+PUT http://localhost:8081/api/alumnos/7
 Content-Type: application/json
 Accept: application/json
 
 {
   "nombre": "Raquel Gómez Ramírez",
   "email": "raquel.ramirez@example.com",
-  "cursoId": 2
-  }
+  "cursoId": 1
 }
 
 
