@@ -8,7 +8,8 @@ import com.example.demoh2.service.AlumnoService;
 import com.example.demoh2.service.CursoService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import java.util.List; 
 import java.util.stream.Collectors;
 

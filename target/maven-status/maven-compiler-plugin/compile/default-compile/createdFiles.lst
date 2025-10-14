@@ -1,0 +1,17 @@
+com\example\demoh2\mapper\AlumnoMapper.class
+com\example\demoh2\dto\CursoRequestDTO.class
+com\example\demoh2\controller\AlumnoController.class
+com\example\demoh2\repository\AlumnoRepository.class
+com\example\demoh2\dto\AlumnoResponseDTO.class
+com\example\demoh2\service\AlumnoService.class
+com\example\demoh2\controller\CursoController.class
+com\example\demoh2\dto\AlumnoRequestDTO.class
+com\example\demoh2\config\SecurityConfig.class
+com\example\demoh2\service\CursoService.class
+com\example\demoh2\domain\Alumno.class
+com\example\demoh2\exceptions\GlobalExceptionHandler.class
+com\example\demoh2\domain\Curso.class
+com\example\demoh2\mapper\CursoMapper.class
+com\example\demoh2\DemoH2Application.class
+com\example\demoh2\dto\CursoResponseDTO.class
+com\example\demoh2\repository\CursoRepository.class

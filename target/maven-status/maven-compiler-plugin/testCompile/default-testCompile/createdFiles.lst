@@ -1,0 +1,8 @@
+com\example\demoh2\model\CursoPojoTest.class
+com\example\demoh2\mapper\AlumnoMapperTest.class
+com\example\demoh2\model\AlumnoPojoTest.class
+com\example\demoh2\repository\AlumnoRepositoryTest.class
+com\example\demoh2\repository\CursoRepositoryTest.class
+com\example\demoh2\DemoH2ApplicationTests.class
+com\example\demoh2\web\SeguridadMvcTest.class
+com\example\demoh2\mapper\CursoMapperTest.class

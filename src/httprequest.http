@@ -1,5 +1,5 @@
 ### ✅ 1. Crear curso válido
-POST http://localhost:8081/api/cursos
+POST http://localhost:9090/api/cursos
 Content-Type: application/json
 Accept: application/json
 
@@ -48,7 +48,7 @@ Accept: application/json
 
 
 ### ✅ 7. Crear curso para probar alumnos
-POST http://localhost:8081/api/cursos
+POST http://localhost:9090/api/cursos
 Content-Type: application/json
 Accept: application/json
 
@@ -105,7 +105,7 @@ Accept: application/json
 
 
 ### ✅ 13. Actualizar alumno (revisar lógica si usas DTO aquí también)
-PUT http://localhost:8081/api/alumnos/7
+PUT http://localhost:8081/api/alumnos/3
 Content-Type: application/json
 Accept: application/json
 
@@ -119,3 +119,19 @@ Accept: application/json
 ### ✅ 14. Eliminar alumno
 DELETE http://localhost:8081/api/alumnos/1
 Accept: application/json
+
+
+# Sin credenciales -&gt; 401
+curl -i http://localhost:8081/api/hola
+# USER puede leer
+curl -i -u alumno:1234 http://localhost:8081/api/hola
+
+# USER lee alumnos (GET) OK, pero no crea (POST)
+curl -i -u alumno:1234 http://localhost:8081/api/alumnos
+curl -i -u alumno:1234 -X POST -H &quot;Content-Type: application/json&quot; -d &#39;{&quot;nombre&quot;:&quot;Ana&quot;}&#39;
+http://localhost:8081/api/alumnos # -&gt; 403
+# ADMIN sí crea
+curl -i -u profe:admin -X POST -H &quot;Content-Type: application/json&quot; -d &#39;{&quot;nombre&quot;:&quot;Ana&quot;}&#39;
+http://localhost:8081/api/alumnos # -&gt; 201/200
+# ADMIN accede a /api/admin/**
+curl -i -u profe:admin http://localhost:8081/api/admin/secret
