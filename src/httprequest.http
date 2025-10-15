@@ -1,4 +1,4 @@
-## ✅ 1. Crear curso válido
+### ✅ 1. Crear curso válido
 POST http://localhost:9090/api/cursos
 Authorization: Basic profe:admin
 Content-Type: application/json
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 
-## ✅ 5. Actualizar curso
+### ✅ 5. Actualizar curso
 PUT http://localhost:9090/api/cursos/1
 Authorization: Basic profe:admin
 Content-Type: application/json
@@ -21,13 +21,13 @@ Accept: application/json
 }
 
 
-## ✅ 6. Eliminar curso
-DELETE http://localhost:8081/api/cursos/1
+### ✅ 6. Eliminar curso
+DELETE http://localhost:9090/api/cursos/1
 Authorization: Basic profe:admin
 Accept: application/json
 
 
-## ✅ 7. Crear curso para probar alumnos
+### ✅ 7. Crear curso para probar alumnos
 POST http://localhost:9090/api/cursos
 Authorization: Basic profe:admin
 Content-Type: application/json
@@ -39,8 +39,8 @@ Accept: application/json
 }
 
 
-## ✅ 8. Crear alumno válido
-POST http://localhost:8081/api/alumnos
+### ✅ 8. Crear alumno válido
+POST http://localhost:9090/api/alumnos
 Authorization: Basic profe:admin
 Content-Type: application/json
 Accept: application/json
@@ -48,12 +48,12 @@ Accept: application/json
 {
   "nombre": "Diego",
   "email": "lucia.gomez@example.com",
-  "cursoId": 8
+  "cursoId": 2
 }
 
 
-## ✅ 13. Actualizar alumno
-PUT http://localhost:8081/api/alumnos/3
+### ✅ 13. Actualizar alumno
+PUT http://localhost:9090/api/alumnos/3
 Authorization: Basic profe:admin
 Content-Type: application/json
 Accept: application/json
@@ -61,17 +61,17 @@ Accept: application/json
 {
   "nombre": "Raquel Gómez Ramírez",
   "email": "raquel.ramirez@example.com",
-  "cursoId": 1
+  "cursoId": 2
 }
 
 
-## ✅ 14. Eliminar alumno
-DELETE http://localhost:8081/api/alumnos/1
+### ✅ 14. Eliminar alumno
+DELETE http://localhost:9090/api/alumnos/1
 Authorization: Basic profe:admin
 Accept: application/json
 
 
-## ✅ Creación de alumno simple (ejemplo admin permitido)
+### ✅ Creación de alumno simple (ejemplo admin permitido)
 POST http://localhost:8080/api/alumnos
 Authorization: Basic profe:admin
 Content-Type: application/json
@@ -81,22 +81,22 @@ Content-Type: application/json
 }
 
 
-## ✅ Acceso a endpoint solo para ADMIN
+### ✅ Acceso a endpoint solo para ADMIN
 GET http://localhost:8080/api/admin/secret
 Authorization: Basic profe:admin
 
 
-## ✅ Lectura pública protegida (alumno)
+### ✅ Lectura pública protegida (alumno)
 GET http://localhost:8080/api/hola
 Authorization: Basic alumno:1234
 
 
-## ✅ Lectura de todos los alumnos (alumno)
+### ✅ Lectura de todos los alumnos (alumno)
 GET http://localhost:8080/api/alumnos
 Authorization: Basic alumno:1234
 
 
-## ❌ Intento de creación de alumno (POST) — Prohibido para USER (alumno)
+### ❌ Intento de creación de alumno (POST) — Prohibido para USER (alumno)
 POST http://localhost:8080/api/alumnos
 Authorization: Basic alumno:1234
 Content-Type: application/json
@@ -106,5 +106,5 @@ Content-Type: application/json
 }
 
 
-## ❌ Acceso sin credenciales (debe fallar con 401 Unauthorized)
+### ❌ Acceso sin credenciales (debe fallar con 401 Unauthorized)
 GET http://localhost:8081/api/hola

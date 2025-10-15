@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Cursos y Alumnos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Gestión de Cursos y Alumnos</h1>
+
+    <h2>Crear Curso</h2>
+    <form id="crearCursoForm">
+        <input type="text" id="nombreCurso" placeholder="Nombre del curso" required>
+        <input type="text" id="profesorCurso" placeholder="Nombre del profesor" required>
+        <button type="submit">Crear Curso</button>
+    </form>
+
+    <h2>Actualizar Curso</h2>
+    <form id="actualizarCursoForm">
+        <input type="number" id="cursoIdActualizar" placeholder="ID del curso" required>
+        <input type="text" id="nuevoNombreCurso" placeholder="Nuevo nombre" required>
+        <input type="text" id="nuevoProfesorCurso" placeholder="Nuevo profesor" required>
+        <button type="submit">Actualizar Curso</button>
+    </form>
+
+    <h2>Eliminar Curso</h2>
+    <form id="eliminarCursoForm">
+        <input type="number" id="cursoIdEliminar" placeholder="ID del curso a eliminar" required>
+        <button type="submit">Eliminar Curso</button>
+    </form>
+
+    <h2>Crear Alumno</h2>
+    <form id="crearAlumnoForm">
+        <input type="text" id="nombreAlumno" placeholder="Nombre del alumno" required>
+        <input type="email" id="emailAlumno" placeholder="Email del alumno" required>
+        <input type="number" id="cursoIdAlumno" placeholder="ID del curso" required>
+        <button type="submit">Crear Alumno</button>
+    </form>
+
+    <h2>Actualizar Alumno</h2>
+    <form id="actualizarAlumnoForm">
+        <input type="number" id="alumnoIdActualizar" placeholder="ID del alumno" required>
+        <input type="text" id="nuevoNombreAlumno" placeholder="Nuevo nombre" required>
+        <input type="email" id="nuevoEmailAlumno" placeholder="Nuevo email" required>
+        <input type="number" id="nuevoCursoIdAlumno" placeholder="Nuevo ID curso" required>
+        <button type="submit">Actualizar Alumno</button>
+    </form>
+
+    <h2>Eliminar Alumno</h2>
+    <form id="eliminarAlumnoForm">
+        <input type="number" id="alumnoIdEliminar" placeholder="ID del alumno a eliminar" required>
+        <button type="submit">Eliminar Alumno</button>
+    </form>
+
+    <h2>Lista de Cursos</h2>
+    <table id="tablaCursos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Profesor</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Lista de Alumnos</h2>
+    <table id="tablaAlumnos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="test-buttons">
+        <h2>Pruebas de Seguridad y Autorización</h2>
+        <button onclick="accesoAdmin()">🔐 Acceso solo ADMIN (/admin/secret)</button>
+        <button onclick="accesoAlumno()">👩‍🎓 Acceso alumno (/hola)</button>
+        <button onclick="leerAlumnosComoAlumno()">📚 Leer alumnos como alumno</button>
+        <button onclick="crearAlumnoComoAlumno()">🚫 Crear alumno como alumno (prohibido)</button>
+        <button onclick="sinCredenciales()">❌ Acceso sin credenciales (/hola)</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
