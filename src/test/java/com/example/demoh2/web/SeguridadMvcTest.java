@@ -10,7 +10,6 @@ import com.example.demoh2.controller.AlumnoController;
 import com.example.demoh2.controller.CursoController; 
 import com.example.demoh2.service.AlumnoService;
 import com.example.demoh2.service.CursoService; 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
  
